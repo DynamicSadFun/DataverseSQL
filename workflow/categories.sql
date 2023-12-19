@@ -1,3 +1,4 @@
+-- query for getting all custom processes with group by categories
 SELECT w.categoryname, COUNT(DISTINCT w.workflowid)
   FROM workflow w WITH(NOLOCK)
  WHERE type = 1        -- definition
