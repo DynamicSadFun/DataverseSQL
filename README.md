@@ -3,8 +3,8 @@ Writing queries to the Power Platform to help with analytical work.
 
 Pre-requisites:
 1) enable TDS endpoint in your env:
+   
 https://community.dynamics.com/blogs/post/?postid=dbb726b6-430e-464c-af22-424ed88bcc1a
-
 https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query 
 
 2) install XRMToolBox:
