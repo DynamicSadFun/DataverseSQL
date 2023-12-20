@@ -1,4 +1,7 @@
 # DataverseSQL
+
+![image](https://github.com/DynamicSadFun/DataverseSQL/assets/86048404/b9ba5e24-04cb-4a9b-a4fc-02e2353f058c)
+
 Writing queries to the Power Platform to help with analytical work. 
 
 Pre-requisites:
