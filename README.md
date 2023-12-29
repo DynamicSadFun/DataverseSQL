@@ -19,5 +19,7 @@ https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/
 Next, you simply compose your queries or use queries from this repository to get the analytics you need. 
 
 **Please be aware that Dataverse SQL has a number of limitations.**
+
 Not all T-SQL functions are supported in it. Read more here:
+
 https://learn.microsoft.com/en-us/power-apps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported
