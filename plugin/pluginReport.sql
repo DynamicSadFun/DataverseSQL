@@ -1,4 +1,4 @@
--- find our plufins with modename (Sync / Async) and autodelete logs flag
+-- find our plugins with modename (Sync / Async) and autodelete logs flag
 
 SELECT DISTINCT asyncautodeletename, plugin.modename, plugin.name, solution.friendlyname
   FROM sdkmessageprocessingstep plugin WITH(NOLOCK)
