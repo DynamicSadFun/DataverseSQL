@@ -8,7 +8,7 @@ SELECT DISTINCT sc1.objectid, sc1.componenttypename
  WHERE s1.friendlyname = 'YOUR_SOLUTION_NAME_#1'
    AND NOT EXISTS
 (
-    SELECT DISTINCT sc.objectid
+    SELECT TOP 1 1
       FROM solution s
       JOIN solutioncomponent sc
         ON s.solutionid = sc.solutionid
