@@ -34,8 +34,11 @@ These scripts solve real-world Dataverse challenges, including:
 1. **Prerequisites**:
    - Access to the Dataverse environment.
    - Enable the TDS endpoint in your environment (admin access required):
+     
       https://community.dynamics.com/blogs/post/?postid=dbb726b6-430e-464c-af22-424ed88bcc1a
-      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query 
+     
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query
+     
    - SQL client can connect to the TDS endpoint (e.g., SQL Server Management Studio, Azure Data Studio).
 
 2. **Connect to the Dataverse TDS Endpoint**:
