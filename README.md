@@ -1,37 +1,60 @@
-# DataverseSQL
+# **DataverseSQL**
 
 ![image](https://github.com/DynamicSadFun/DataverseSQL/assets/86048404/b9ba5e24-04cb-4a9b-a4fc-02e2353f058c)
 
-### Project Overview
-DataverseSQL serves as a robust toolkit for developers and data analysts seeking to leverage SQL within the Microsoft Power Platform's Dataverse. It bridges the gap between complex data structures and actionable insights, providing a suite of queries for enhanced data interaction and analytics.
+Welcome to the **DataverseSQL** repository! This collection showcases useful SQL queries for working with Microsoft Dataverse environments via the TDS (Tabular Data Stream) endpoint. Whether you're troubleshooting, analyzing metadata, or extracting complex relationships, this repository has you covered.
 
-### Technology Stack
-This repository utilizes SQL, primarily focusing on the Power Platform's Dataverse environment. It harnesses the advanced querying capabilities of Dataverse, ensuring optimal compatibility and performance and extensibility for a range of analytics needs.
+## **Overview**
 
-### Pre-requisites
-1) enable TDS endpoint in your env:
-   
-https://community.dynamics.com/blogs/post/?postid=dbb726b6-430e-464c-af22-424ed88bcc1a
-https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query 
+Dataverse supports direct querying using SQL via the TDS endpoint. This repository provides tested and reusable SQL scripts to interact with Dataverse metadata, retrieve business data, and analyze your environment.
+These queries:
+- Enhance productivity by simplifying data analysis.
+- Serve as templates for custom scripts tailored to your needs.
+- Demonstrate advanced querying techniques for Dataverse environments.
 
-2) install XRMToolBox:
-https://github.com/MscrmTools/XrmToolBox/releases/download/v1.2023.12.68/XrmToolbox.zip
-3) install SQL 4 CDS plugin:
-https://www.xrmtoolbox.com/plugins/MarkMpn.SQL4CDS/
-4) Add a connection to your environment.
+## **Features**
 
-### How to Use
-1. **Selecting a Query**: Identify the query that matches your data requirement from the repository.
-2. **Understanding the Query**: Review the documentation within the script to understand its functionality and intended use case.
-3. **Executing the Query**: Implement the query within your Dataverse environment, ensuring you have the necessary permissions and it's within a controlled development or testing environment.
+### 🔍 **Comprehensive Queries**
+This repository includes scripts for:
+- Metadata analysis (tables, columns, relationships, etc.).
+- Business entity insights (contacts, accounts, activities, etc.).
+- Advanced relationships (hierarchies, lookups, 1:N and N:N relationships).
+- Plugin, workflow, and process diagnostics.
 
-### Usage Scenarios
-- **Data Cleaning**: Use provided scripts to identify and rectify data discrepancies.
-- **Analytics Reporting**: Leverage queries to generate custom reports and dashboards.
-- **Operational Insights**: Execute scripts to gain operational insights from transactional
+### 🛠️ **Extensibility**
+Each query is modular and easy to adapt for your specific use cases.
 
-**Please be aware that Dataverse SQL has a number of limitations.**
+### 🚀 **Real-World Examples**
+These scripts solve real-world Dataverse challenges, including:
+- Identifying unused fields or custom entities.
+- Tracking solution dependencies and customizations.
+- Monitoring and optimizing system performance.
 
-Not all T-SQL functions are supported in it. Read more here:
+## **How to Use**
+1. **Prerequisites**:
+   - Access to the Dataverse environment.
+   - Enable the TDS endpoint in your environment (admin access required):
+      https://community.dynamics.com/blogs/post/?postid=dbb726b6-430e-464c-af22-424ed88bcc1a
+      https://learn.microsoft.com/en-us/power-apps/developer/data-platform/dataverse-sql-query 
+   - SQL client can connect to the TDS endpoint (e.g., SQL Server Management Studio, Azure Data Studio).
 
-https://learn.microsoft.com/en-us/power-apps/developer/data-platform/how-dataverse-sql-differs-from-transact-sql?tabs=supported
+2. **Connect to the Dataverse TDS Endpoint**:
+   - Use your environment URL as the server name (e.g., `yourenvironment.crm.dynamics.com`).
+   - Authenticate using Azure Active Directory credentials.
+
+3. **Run the Queries**:
+   - Copy the desired SQL query from this repository.
+   - Paste it into your SQL client.
+   - Execute the query and review the results.
+
+---
+
+## **Contributing**
+
+Contributions are welcome! If you have a useful SQL query for Dataverse, feel free to open a pull request or submit an issue.
+
+---
+
+## **Acknowledgements**
+
+Special thanks to the Microsoft Dataverse community for providing tools, guidance, and inspiration for these queries.
