@@ -1,11 +1,25 @@
--- find our plugins with modename (Sync / Async) and autodelete logs flag
+-- full analyze about your plugins
 
-SELECT DISTINCT asyncautodeletename, plugin.modename, plugin.name, solution.friendlyname
-  FROM sdkmessageprocessingstep plugin WITH(NOLOCK)
+SELECT DISTINCT 
+       step.sdkmessageprocessingstepid                  AS PluginStepId,
+       step.eventhandlername                            AS HandlerName,
+       step.Name                                        AS PluginstepName,
+       IIF(step.modename = 'Synchronous', 'YES', 'NO')  AS [Sync?],
+       step.stagename                                   AS StageName,
+       step.sdkmessageidname                            AS Event,
+       filter.primaryobjecttypecodename                 AS PrimaryEntity,
+       step.FilteringAttributes                         AS FilteringFields
+  FROM sdkmessageprocessingstep step WITH(NOLOCK)
+  JOIN sdkmessagefilter filter WITH(NOLOCK)
+    ON step.sdkmessagefilterid = filter.sdkmessagefilterid
   JOIN solutioncomponent sc WITH(NOLOCK)
-    ON sc.objectid = plugin.sdkmessageprocessingstepid
-  JOIN solution WITH(NOLOCK)
-    ON sc.solutionid = solution.solutionid
--- put your solution or publisher name into condition
- WHERE solution.friendlyname = 'YOUR_SOLUTION_NAME'
-    OR solution.publisheridname = 'YOUR_PUBLISHER_NAME'
+    ON sc.objectid = step.sdkmessageprocessingstepid
+  JOIN solution s WITH(NOLOCK)
+    ON sc.solutionid = s.solutionid
+ WHERE step.statecode = 0 -- Active steps
+   --AND s.friendlyname = 'YOUR_SOLUTION_NAME' -- you can filter by solution
+ ORDER BY step.stagename, step.sdkmessageidname
+
+
+
+
