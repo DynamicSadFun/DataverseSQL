@@ -20,7 +20,7 @@ SELECT MAX(aud.dt) 		 AS MaxDateTimeLogin,
   JOIN (
         SELECT a.objectid, MAX(a.createdon) AS DT 
           FROM audit a WITH(NOLOCK)
-         WHERE a.action = 64
+         WHERE a.action = 64 	-- action User Access via Web
          GROUP BY a.objectid
        ) aud
     ON su.systemuserid = aud.objectid
