@@ -1,3 +1,6 @@
+--This SQL query allows you to analyze Connection References in your system, 
+--in particular, which ones are involved in your PA flows and which ones you can painlessly get rid of
+
 WITH JsonData AS (
     -- Extract the connection references from the JSON clientdata field
     SELECT w.name AS FlowName, 
