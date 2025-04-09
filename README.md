@@ -50,6 +50,11 @@ These scripts solve real-world Dataverse challenges, including:
    - Paste it into your SQL client.
    - Execute the query and review the results.
 
+**Important!**
+Some queries, especially those containing the WITH construct, may not work in SSMS or other tools. 
+This is why I strongly recommend that you use XrmToolBox and SQL4CDS. There all 100% of queries work properly: 
+
+https://markcarrington.dev/sql-4-cds/
 ---
 
 ## **Contributing**
