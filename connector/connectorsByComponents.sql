@@ -11,7 +11,7 @@ WITH FlowConnectors AS (
       FROM workflow w
      CROSS APPLY OPENJSON(w.clientdata, '$.properties.connectionReferences') AS c
      WHERE w.categoryname = 'Modern Flow'   -- PA flow 
-	     AND w.statecode = 1                  -- Active 
+       AND w.statecode = 1                  -- Active 
 ),
 
 -- Connectors used in Canvas Apps
