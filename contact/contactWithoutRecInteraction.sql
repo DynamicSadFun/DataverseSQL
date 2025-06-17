@@ -1,6 +1,9 @@
 --Identify contacts that might be slipping away due to lack of recent interaction
 
-SELECT DISTINCT c.contactid, c.fullname, MAX(a.modifiedon) AS LastActivityDate
+SELECT DISTINCT 
+       c.contactid, 
+       c.fullname, 
+       MAX(a.modifiedon) AS LastActivityDate
   FROM contact c
   JOIN activitypointer a
     ON c.contactid = a.regardingobjectid
