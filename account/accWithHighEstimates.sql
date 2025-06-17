@@ -1,6 +1,8 @@
 --Find accounts with associated open opportunities totaling a high value.
 
-SELECT a.accountid, a.name, SUM(o.estimatedvalue) AS TotalEstimatedValue
+SELECT a.accountid, 
+       a.name, 
+       SUM(o.estimatedvalue) AS TotalEstimatedValue
   FROM account a
   JOIN opportunity o
     ON a.accountid = o.accountid -- think about o.accountid field. Maybe in your system you're using CustomerID field? Then you should use it here. 
