@@ -1,4 +1,6 @@
-SELECT r.name, COUNT(DISTINCT su.systemuserid) AS CountOfUsers
+-- Role Name and count of users with it
+SELECT r.name, 
+       COUNT(DISTINCT su.systemuserid) AS CountOfUsers
   FROM systemuser su
   JOIN systemuserroles sur
     ON su.systemuserid = sur.systemuserid
