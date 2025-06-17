@@ -1,6 +1,9 @@
 -- This query allows you to quickly find all teams that have members and have security roles assigned to those teams
 
-SELECT DISTINCT su.fullname AS UserName, t.name AS TeamName, r.name AS RoleName
+SELECT DISTINCT 
+       su.fullname AS UserName, 
+       t.name      AS TeamName, 
+       r.name      AS RoleName
   FROM team t
   JOIN teamroles tr
     ON tr.teamid = t.teamid
