@@ -8,7 +8,7 @@ or 0 if it doesn't — helping to quickly validate Web API configuration complet
 SELECT LEFT(mspp_name, CHARINDEX('/', mspp_name, CHARINDEX('/', mspp_name) + 1) - 1)    AS base_path,
        MAX(IIF(mspp_name LIKE '%enabled', 1, 0))                                        AS enabled,
        MAX(IIF(mspp_name LIKE '%fields', 1, 0))                                         AS fields
-  FROM mspp_sitesetting
+  FROM mspp_sitesetting -- put adx instead of mspp if you have old (standard) data model
  WHERE mspp_name LIKE 'Webapi%'
    AND statecode = 0 
    AND (
